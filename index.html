@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trézor.io/Start® | Starting Up Your Device | Trézor®</title>
+    <meta name="description" content="Discover how to get started with Trézor.io/start, explore Trézor Suite, Trézor Bridge, and Trézor's Hardware Wallet and Staking features." />
+    <meta name="keywords" content="Trézor.io/start, Trézor Suite, Trézor Bridge, Trézor Hardware Wallet, Trézor Staking" />
+    <meta property="og:title" content="Trézor.io/Start® | Starting Up Your Device | Trézor®" />
+    <meta property="og:description" content="Discover how to get started with Trézor.io/start, explore Trézor Suite, Trézor Bridge, and Trézor's Hardware Wallet and Staking features." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://welcome-trezoor.github.io/en-us/" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .animated-bg {
+            background: linear-gradient(45deg, 
+                rgba(123, 31, 162, 0.1),
+                rgba(32, 201, 151, 0.1),
+                rgba(242, 201, 76, 0.1)
+            );
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        .neon-border {
+            box-shadow: 0 0 10px rgb(168, 85, 247),
+                        0 0 20px rgb(168, 85, 247),
+                        0 0 30px rgb(168, 85, 247);
+        }
+
+        .cyber-button {
+            position: relative;
+            overflow: hidden;
+            background: transparent;
+            border: 2px solid rgb(168, 85, 247);
+            color: rgb(168, 85, 247);
+            transition: all 0.3s;
+        }
+
+        .cyber-button:hover {
+            color: white;
+            border-color: rgb(168, 85, 247);
+            background: rgba(168, 85, 247, 0.2);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .slide-in.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-black/80 backdrop-blur-lg border-b border-purple-500/20">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400">
+                        Trézor.io/Start
+                    </h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#features" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Features</a>
+                        <a href="#security" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Security</a>
+                        <a href="#download" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Download</a>
+                        <a href="#support" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Support</a>
+                        <button class="cyber-button px-8 py-3 ml-4">Launch App</button>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="#features" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Features</a>
+                    <a href="#security" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Security</a>
+                    <a href="#download" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Download</a>
+                    <a href="#support" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Support</a>
+                    <button class="cyber-button w-full mt-4 px-8 py-3">Launch App</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center animated-bg">
+        <div class="text-center px-4 fade-in">
+            <h1 class="text-6xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400">
+                Welcome to Trézor.io/Start
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-300">
+                The Next Generation of Crypto Asset Management
+            </p>
+            <button class="cyber-button px-8 py-3">Get Started</button>
+        </div>
+        <div class="absolute bottom-10" style="animation: float 2s infinite ease-in-out">
+            <i data-lucide="chevron-down" class="w-8 h-8 text-white/60"></i>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto fade-in">
+            <h2 class="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400">
+                Revolutionary Features
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-lg neon-border fade-in">
+                    <div class="text-purple-400 mb-4">
+                        <i data-lucide="shield" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Advanced Security</h3>
+                    <p class="text-gray-400">Military-grade encryption protecting your assets</p>
+                </div>
+                <div class="p-6 rounded-lg neon-border fade-in">
+                    <div class="text-purple-400 mb-4">
+                        <i data-lucide="lock" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Secure Storage</h3>
+                    <p class="text-gray-400">Cold storage solution for maximum protection</p>
+                </div>
+                <div class="p-6 rounded-lg neon-border fade-in">
+                    <div class="text-purple-400 mb-4">
+                        <i data-lucide="wallet" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Multi-Currency Support</h3>
+                    <p class="text-gray-400">Manage multiple cryptocurrencies in one place</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-20 px-4 md:px-8 bg-gradient-to-b from-black to-purple-900/20">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400 fade-in">
+                The Ultimate Guide to Setting Up Your Trézor Wallet
+            </h2>
+
+            <div class="prose prose-invert max-w-none">
+                <p class="text-gray-300 mb-8 text-lg fade-in">
+                    If you're looking to start your journey into cryptocurrency security, <strong class="text-purple-400">Trézor.io/start</strong> is the perfect place to begin. As one of the most trusted brands in hardware wallets, Trézor makes it easy to securely store and manage your digital assets.
+                </p>
+
+                <h3 class="text-2xl font-bold mt-12 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400 slide-in">
+                    Getting Started with Trézor.io/start
+                </h3>
+                <p class="text-gray-300 mb-8 fade-in">
+                    To begin, visit <strong class="text-purple-400">Trézor.io/start</strong>, which is the official setup page for your <strong class="text-purple-400">Trézor hardware wallet</strong>. The page provides detailed instructions to guide you through the installation of <strong class="text-purple-400">Trézor Suite</strong>, a desktop application for managing your wallet.
+                </p>
+
+                <h3 class="text-2xl font-bold mt-12 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400 slide-in">
+                    Connecting with Trézor Bridge
+                </h3>
+                <p class="text-gray-300 mb-8 fade-in">
+                    After setting up your wallet, you may also need to install <strong class="text-purple-400">Trézor Bridge</strong>. This software acts as a bridge between your Trézor device and your computer, enabling you to access and manage your digital assets securely.
+                </p>
+
+                <h3 class="text-2xl font-bold mt-12 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400 slide-in">
+                    Trézor Hardware Wallet: Your Digital Asset Guardian
+                </h3>
+                <p class="text-gray-300 mb-8 fade-in">
+                    The <strong class="text-purple-400">Trézor hardware wallet</strong> is a physical device designed to store your private keys offline, offering unparalleled protection against online threats such as hacking and phishing attacks.
+                </p>
+
+                <h3 class="text-2xl font-bold mt-12 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400 slide-in">
+                    Trézor Staking: Earning Rewards with Your Crypto
+                </h3>
+                <p class="text-gray-300 mb-8 fade-in">
+                    Another exciting feature available through Trézor is <strong class="text-purple-400">Trézor Staking</strong>. Staking allows you to participate in proof-of-stake (PoS) networks and earn rewards by holding your assets in a staking wallet.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/90 border-t border-purple-500/20">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400">
+                        Trézor Suite
+                    </h3>
+                    <p class="text-gray-400">
+                        Secure your digital assets with the most trusted hardware wallet.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Trézor One</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Trézor Model T</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Accessories</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Support</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 Trézor Suite. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="github" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="twitter" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="facebook" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="youtube" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = mobileMenuButton.querySelector('i');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+            lucide.createIcons();
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in and slide-in classes
+        document.querySelectorAll('.fade-in, .slide-in').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
